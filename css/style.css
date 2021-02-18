@@ -1,0 +1,31 @@
+body{
+    background:#000000;
+  }
+  /* centering purpose only */
+  svg{
+    display:block;
+    width:250px;
+      position:fixed;
+          top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) matrix(1, 0, 0, 1, 0, 0);
+  }
+  path{
+    stroke:#fff;/* color of the signature */
+    stroke-width:4px;/* need to be more than 0 otherwise you can't see it */
+    animation: demodraw 2s linear infinite ; /* name of the keyframe, duration, easing function ( slow start fast ending ), repeat infinietly */
+   stroke-dasharray: 1800;/* value returned by var path = document.querySelector('path');
+  var length = path.getTotalLength(); */
+    stroke-dashoffset: 1800;/* value returned by var path = document.querySelector('path');
+  var length = path.getTotalLength(); */
+  }
+  
+  @keyframes demodraw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  
+  
+  
+  
